@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+  <head> 
+    <meta charset="utf-8" />  
+    <!-- Change for better search engine indexing -->  
+    <title>اشتراک گذاری دانسته ها</title>  
+    <meta name="title" content="اشتراک گذاری دانسته ها" />  
+    <meta name="description" content="این سایت در جهت نشر آموخته و تجربیات در خدمت شما است." />  
+    <meta name="keywords" content="computer, software, programming, android" />  
+    <meta name="subject" content="اشتراک گذاری دانسته ها" />  
+    <meta name="copyright" content="Tayebeh Hosseini" />  
+    <meta name="robots" content="All" />  
+    <meta name="abstract" content="share knowledge" />  
+    <meta name="MSSmartTagsPreventParsing" content="true" />  
+    <link id="theme" rel="stylesheet" type="text/css" href="style.css" title="theme" />  
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto+Condensed|Roboto+Condensed:300|Roboto+Condensed:300|Roboto+Condensed:300|Roboto+Condensed:300" type="text/css" />  
+	<script type="text/javascript" language="javascript" src="js/jquery-1.8.1.min.js"></script>  
+	<script type="text/javascript" language="javascript" src="js/scripts.js"></script>  
+	<script type="text/javascript" language="javascript" src="js/theme.js"></script>  
+	<script type="text/javascript" language="javascript" src="js/custom.js"></script>  
+
+	<script type="text/javascript" language="javascript" src="js/jquery.min.js"></script>  
+	<script>
+		$(document).ready(function(){
+			$('.zoom').hover(function() {
+				$(this).addClass('transition');
+			}, function() {
+				$(this).removeClass('transition');
+			});
+		});
+	</script>
+
+    <!-- Add your custom script here --> 
+  </head>  
+  <body> 
+    <header> 
+      <div id="top"> 
+        <div class="bg"></div>  
+        <div class="row"> 
+          <div id="logo"></div>  
+          <nav>            
+			<div class="dropdown">
+			  <a href="index.html">صفحه اصلی</a>			 
+			</div>
+			
+			<div class="dropdown">
+			  <button class="dropbtn">آموزش ها</button>
+			  <div class="dropdown-content">
+				<a href="android.html">اندروید</a>
+				<a href="php_mysql.html">PHP & MySql</a>
+				<a href="matlab.html">متلب</a>
+				<a href="electronic.html">الکترونیک</a>
+			  </div>
+			</div>
+			
+			<div class="dropdown">
+			  <button class="dropbtn">محصولات</button>
+			  <div class="dropdown-content">
+				<a href="find_book.html">اپلیکیشن جستجوی کتاب</a>
+				<a href="register_book.html">اپلیکیشن ثبت کتاب</a>
+			  </div>
+			</div>			
+          </nav>  
+          <div class="clear"></div> 
+        </div> 
+      </div>  
+      <div id="header-wrapper"> 
+        <div class="bg"></div>  
+        <div class="row"> 
+          <div id="header"> 
+            <div id="tagline"> 
+              <h1>سایتی جهت نشر آموخته ها و تجربیات علمی</h1>  
+              <input type="button" class="cta pie" value="بیشتر بدانید ..." /> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </header>  
+    <div id="wrapper"> 
+      <div class="bg"></div>  
+      <div class="row"> 
+        <div class="table_container"> 
+			<table border="1" class="vertical_tbl_menu">
+				<tr>
+					<td style="width:25%" valign="top">
+						<div class="vertical-menu">
+						  <a href="android.html" class="active">Android</a>
+						  <a href="android_user_session.html" class="selected_menu">Android User Session</a>
+						  <a href="android_json_parsing_using_volley.html">Android JSON parsing using Volley</a>						  
+						</div>
+					</td>
+					<td style="width:75%">
+						<div class="b_title_description">Android User Session</div>
+						<div class="content_description">
+							جلسه یا session زمانی مفید است که شما می‌خواهید داده های کاربر را در سطح تمام برنامه ذخیره کنید. با دو روش می‌توان این کار را انجام داد. اولین روش این است که داده‌ها را به صورت سراسری تعریف کنید و دومین روش استفاده از ”تنظیمات مشترک“ یا shared preferences است. مشکل روش اول این است که با بستن برنامه داده‌ها از بین می‌روند، ولی با روش دوم داده‌ها را در صورتی که حتی کاربر برنامه را هم ببندد از دست نخواهند رفت.
+							<br/>
+							”تنظیمات مشترک“ اجازه ذخیره‌سازی کلیدهایی با مقادیر جفتی ”نام“ و ”مقدار“ را به شما می‌دهد. قبل از شروع آموزش اطلاعات اولیه مورد نیاز برای کار با تنظیمات مشترک را ارائه می‌دهیم.						<div class="s_title_description">مقداردهی اولیه</div>
+						<div class="content_description">
+							”تنظیمات مشترک“ با استفاده از متد ()getSharedPreferences می‌تواند واکشی شود. همچنین برای ویرایش و ذخیره تغییرات در ”تنظیمات مشترک“، به یک ویرایشگر  یا editor نیاز دارید. برای دریافت ”تنظیمات مشترک“، از کد زیر استفاده می شود.
+						</div>
+						<div class="code_description">
+<pre>
+SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+Editor editor = pref.edit();
+</pre>
+						</div>
+						
+						<div class="s_title_description">ذخیره داده</div>
+						<div class="content_description">
+							شما می‌توانید داده‌ها را درون ”تنظیمات مشترک“ با استفاده از editor ذخیره کنید. تمام انواع داده‌های اولیه مانند boolean، float، int، long  و string پشتیبانی می‌شود. برای ذخیره تغییرات در ”تنظیمات مشترک“ باید ()editor.commit فراخوانی شود.
+						</div>
+						<div class="code_description">
+<pre>
+editor.putBoolean("key_name", true); // Storing boolean - true/false
+editor.putString("key_name", "string value"); // Storing string
+editor.putInt("key_name", "int value"); // Storing integer
+editor.putFloat("key_name", "float value"); // Storing float
+editor.putLong("key_name", "long value"); // Storing long
+
+editor.commit(); // commit changes
+</pre>
+						</div>
+						
+						<div class="s_title_description">بازیابی داده‌</div>
+						<div class="content_description">
+							با استفاده از فراخوانی متد ()getString (برای رشته) می‌توان داده ذخیره شده در ”تنظیمات مشترک“ را بازیابی کرد. به یاد داشته باشید این متد باید بر روی ”تنظیمات مشترک“ فراخوانی شود نه بر روی Editor.
+						</div>
+						<div class="code_description">
+<pre>
+// returns stored preference value
+// If value is not present return second param value - In this case null
+pref.getString("key_name", null); // getting String
+pref.getInt("key_name", null); // getting Integer
+pref.getFloat("key_name", null); // getting Float
+pref.getLong("key_name", null); // getting Long
+pref.getBoolean("key_name", null); // getting boolean
+</pre>
+						</div>
+						
+						<div class="s_title_description">‌پاک‌سازی / حذف داده‌ها</div>
+						<div class="content_description">
+							اگر می‌خواهید ”تنظیمات مشترک“ را حذف کنید، می‌توانید از متد remove("key_name") برای حذف یک مقدار خاص استفاده کنید. اگر می‌خواهید تمام داده‌ها را حذف کنید متد ()clear را فراخوانی کنید.
+						</div>
+						<div class="code_description">
+<pre>
+editor.remove("name"); // will delete key name
+editor.remove("email"); // will delete key email
+ 
+editor.commit(); // commit changes
+</pre>
+						</div>
+						
+						<div class="content_description">
+							در ادامه تمام داده‌ها از ”تنظیمات مشترک“ پاک می‌شوند.
+						</div>
+						<div class="code_description">
+<pre>
+editor.clear();
+editor.commit(); // commit changes
+</pre>
+						</div>
+						
+						<div class="content_description">
+							در آموزش ساده زیر یک فرم ورود و صفحه نمایش داریم. در ابتدا کاربر با استفاده از اطلاعات مربوط به login سیستم وارد شده و هنگامی که ورود موفقیت‌آمیز باشد، نام و ایمیل او در ”تنظیمات مشترک“ ذخیره می‌شود.
+							<br/>
+							<br/>
+							<center>----------------------------------------------------------------------------------------</center>
+							<br/>
+						</div>
+						
+						<div class="s_title_description">‌مدیریت جلسه با استفاده از ”تنظیمات مشترک“</div>
+						<div class="content_description">
+							1-  ایجاد یک پروژه جدید در مسیر File ⇒  New ⇒  Android Application Project  و پر کردن تمام جزئیات مورد نیاز<br/>
+							2- ما یک کلاس مدیریت هشدار برای نشان دادن پیام های هشدار برای اعتبار فرم ورود اضافه می‌کنیم. یک کلاس جدید ایجاد کنید و نام آن AlertDialogManager.java باشد و کد زیر را وارد کنید.
+						</div>
+						<div class="code_description">
+<pre>
+AlertDialogManager.java
+package com.androidhive.sessions;
+ 
+ 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+  
+public class AlertDialogManager {
+    /**
+     * Function to display simple Alert Dialog
+     * @param context - application context
+     * @param title - alert dialog title
+     * @param message - alert message
+     * @param status - success/failure (used to set icon)
+     *               - pass null if you don't want icon
+     * */
+    public void showAlertDialog(Context context, String title, String message,
+            Boolean status) {
+        AlertDialog alertDialog = new AlertDialog.Builder(context).create();
+  
+        // Setting Dialog Title
+        alertDialog.setTitle(title);
+  
+        // Setting Dialog Message
+        alertDialog.setMessage(message);
+  
+        if(status != null)
+            // Setting alert dialog icon
+            alertDialog.setIcon((status) ? R.drawable.success : R.drawable.fail);
+  
+        // Setting OK Button
+        alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+  
+        // Showing Alert Message
+        alertDialog.show();
+    }
+}
+</pre>
+						</div>
+						
+						<div class="content_description">
+							3- ما تمام توابع مربوط به جلسه را در یک کلاس نوشته‌ایم تا برای همه فعالیت‌ها در دسترس قرار گیرند. یک کلاس جدید به نام SessionManagement.java ایجاد کرده و خطوط زیر را اضافه کنید.
+						</div>
+						<div class="code_description">
+<pre>
+SessionManagement.java
+package com.androidhive.sessions;
+ 
+import java.util.HashMap;
+ 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+ 
+public class SessionManager {
+    // Shared Preferences
+    SharedPreferences pref;
+     
+    // Editor for Shared preferences
+    Editor editor;
+     
+    // Context
+    Context _context;
+     
+    // Shared pref mode
+    int PRIVATE_MODE = 0;
+     
+    // Sharedpref file name
+    private static final String PREF_NAME = "AndroidHivePref";
+     
+    // All Shared Preferences Keys
+    private static final String IS_LOGIN = "IsLoggedIn";
+     
+    // User name (make variable public to access from outside)
+    public static final String KEY_NAME = "name";
+     
+    // Email address (make variable public to access from outside)
+    public static final String KEY_EMAIL = "email";
+     
+    // Constructor
+    public SessionManager(Context context){
+        this._context = context;
+        pref = _context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
+        editor = pref.edit();
+    }
+}
+</pre>							
+						</div>
+						
+						<div class="content_description">
+							4- در این مثال ما ”وضعیت ورود“، ”نام“ و ”ایمیل“ در ”تنظیمات مشترک“ را ذخیره می‌کنیم، بنابراین یک تابع به نام createLoginSession(String name, String email)  را به کلاس SessionManagement اضافه کردیم. تابع زیر را به SessionManagement.java اضافه کنید.						</div>
+						<div class="code_description">
+<pre>
+/**
+ * Create login session
+ * */
+public void createLoginSession(String name, String email){
+	// Storing login value as TRUE
+	editor.putBoolean(IS_LOGIN, true);
+	 
+	// Storing name in pref
+	editor.putString(KEY_NAME, name);
+	 
+	// Storing email in pref
+	editor.putString(KEY_EMAIL, email);
+	 
+	// commit changes
+	editor.commit();
+}
+</pre>							
+						</div>
+						
+						<div class="content_description">
+							5- برای دریافت داده‌های ”تنظیمات مشترک“، یک تابع به نام ()getUserDetails به کد زیر اضافه کردیم.						</div>
+						<div class="code_description">
+<pre>
+/**
+ * Get stored session data
+ * */
+public HashMap<String, String> getUserDetails(){
+	HashMap<String, String> user = new HashMap<String, String>();
+	// user name
+	user.put(KEY_NAME, pref.getString(KEY_NAME, null));
+	 
+	// user email id
+	user.put(KEY_EMAIL, pref.getString(KEY_EMAIL, null));
+	 
+	// return user
+	return user;
+}
+</pre>							
+						</div>
+						
+						<div class="content_description">
+							6- برای بررسی اینکه آیا کاربر وارد سیستم شده یا نه، یک تابع به نام  ()checkLogin را اضافه کرده‌ایم که شما می‌توانید در همه اکتیویتی‌ها برای بررسی وضعیت ورود به سیستم استفاده کنید.<br/>
+							این تابع به سادگی وضعیت ورود کاربر را با کمک ”تنظیمات مشترک“ بررسی می‌کند و اگر وارد نشده باشد، کاربر را به LoginActivity هدایت می‌کند.
+						</div>
+						<div class="code_description">
+<pre>
+/**
+ * Check login method wil check user login status
+ * If false it will redirect user to login page
+ * Else won't do anything
+ * */
+public void checkLogin(){
+	// Check login status
+	if(!this.isLoggedIn()){
+		// user is not logged in redirect him to Login Activity
+		Intent i = new Intent(_context, LoginActivity.class);
+		// Closing all the Activities
+		i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		 
+		// Add new Flag to start new Activity
+		i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		 
+		// Staring Login Activity
+		_context.startActivity(i);
+	}
+	 
+}
+</pre>						
+						</div>
+						
+						<div class="content_description">
+							7- یک تابع به نام logoutUser()  را برای پاک کردن تمام داده‌ها از ”تنظیمات مشترک“ اضافه کنید. هنگامی که کاربر بخواهد خارج شود، این تابع را فراخوانی کنید.<br/>
+							این تابع تمام داده‌های جلسه را پاک کرده و کاربر را برای LoginActivity هدایت می‌کند.
+						</div>
+						<div class="code_description">
+<pre>
+/**
+ * Clear session details
+ * */
+public void logoutUser(){
+	// Clearing all data from Shared Preferences
+	editor.clear();
+	editor.commit();
+	 
+	// After logout redirect user to Loing Activity
+	Intent i = new Intent(_context, LoginActivity.class);
+	// Closing all the Activities
+	i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+	 
+	// Add new Flag to start new Activity
+	i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+	 
+	// Staring Login Activity
+	_context.startActivity(i);
+}
+</pre>							
+						</div>		
+						
+						<div class="content_description">
+							منبع: https://www.androidhive.info/2012/08/android-session-management-using-shared-preferences/ <br/>
+							در حال تکمیل ... <br/>
+						</div>
+						
+						<!--<div class="s_title_description">‌</div>
+						<div class="content_description">
+						
+						</div>
+						<div class="code_description">
+							
+						</div>-->
+						
+					</td>
+				</tr>				
+			</table>
+        </div> 
+      </div> 
+    </div> 
+				
+    <footer id="footer"> 
+      <div class="bg"></div>  
+      <div class="content"> 
+        <div class="group"> 
+          <div class="col span_1_of_3"> 
+            <h2>لینک های مرتبط</h2>  
+            <div class="vmenu"> 
+              <ul>                
+                <li>
+                  <a href="https://www.tutorialspoint.com/android/">Tutorials Point</a>
+                </li>  
+                <li>
+                  <a href="https://www.androidhive.info">Android Hive</a>
+                </li>  
+				<li>
+                  <a href="https://www.w3schools.com/">W3Schools</a>
+                </li>
+				<li>
+                  <a href="https://stackoverflow.com/">Stackoverflow</a>
+                </li>  				
+              </ul> 
+            </div> 
+          </div>  
+          <div class="col span_1_of_3"> 
+            <h2>درباره ما</h2>  
+            <p class="des">این یک سایت آزمایشی برای نشر تجربیات بنده در زمینه های برنامه نویسی وب، اندروید و الکترونیک می باشد.</p> 
+          </div>  
+          <div class="col span_1_of_3"> 
+            <h2>تماس با ما</h2>  
+            <p class="des">آدرس: تهران، آزادی، کوچه هشتم، کوچه آران، پلاک 22
+              <br />ایمیل: admin@tayebehhosseini.ir
+              <br /> تلفن تماس: 7086696-0918
+            </p> 
+          </div> 
+        </div>  
+        <div class="clear"></div>  
+        <div class="baseline"> 
+          <div> 
+            <p class="copyright"> تمام حقوق مادی و معنوی این سایت متعلق به 
+              <a href="http://www.tayebehhosseini.ir">اشتراک گذار ی دانسته ها</a> می باشد. | 1396
+			  
+            </p> 
+          </div> 
+		  <br/>
+          <ul class="social-links"> 
+            <li> 
+              <a href="#" rel="nofollow" style="background-image:url('images/linkedin.png')" title="Linkedin"></a> 
+            </li>              
+            <li> 
+              <a href="#" style="background-image:url('images/googleplus.png')" title="Google+"></a> 
+            </li>  
+            <li> 
+              <a href="#" rel="nofollow" style="background-image:url('images/telegram.png')" title="Telegram"></a> 
+            </li> 
+          </ul>  
+          <div class="clear"></div> 
+        </div> 
+      </div> 
+    </footer> 
+  </body> 
+</html>
